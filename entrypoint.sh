@@ -10,7 +10,7 @@ fi
 
 BASE_URL="http://frontend-url"
 CONCURRENCY=5
-DURATION=60s
+DURATION=60
 PORT=4999
 
 
