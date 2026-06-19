@@ -8,10 +8,11 @@ if [ -f /data/params ]; then
     set +a
 fi
 
-: "${BASE_URL:?BASE_URL is required}"
-: "${CONCURRENCY:?CONCURRENCY is required}"
-: "${DURATION:?DURATION is required}"
-: "${PORT:?PORT is required}"
+BASE_URL="http://frontend-url"
+CONCURRENCY=5
+DURATION=60s
+PORT=4999
+
 
 if ! [[ "${CONCURRENCY}" =~ ^[0-9]+$ ]] || [ "${CONCURRENCY}" -lt 1 ]; then
     echo "CONCURRENCY must be a positive integer" >&2
